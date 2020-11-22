@@ -12,4 +12,3 @@ public class AI_bot {
 
     }
 }
-
