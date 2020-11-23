@@ -10,6 +10,7 @@ public class Engine {
     Scanner sc = new Scanner(System.in);
     Random rd = new Random();
 
+
     Engine(){
         String[] b1 = {".",".","."};
         String[] b2 = {".",".","."};
@@ -31,7 +32,7 @@ public class Engine {
                 System.out.print(" "+u+" ");
 
             }
-            System.out.println("");
+            System.out.println();
         }
     }
     public int getInput(String l){
@@ -91,21 +92,37 @@ public class Engine {
         }
         return false;
     }
-    public String swapChance(String current){
-        if (current=="x"){return "o";}
-        else {return "x";}
 
-    }
-    public boolean avail(int num,String[][] board){
-
-        int[] add= this.intToAdd(num);
-        int ad1=--add[0];
-        int ad2=--add[1];
-        return board[ad1][ad2]==".";
-
+    public String swapChance(String current) {
+        if (current == "x") {
+            return "o";
+        } else {
+            return "x";
+        }
 
     }
 
+    public boolean avail(int num, String[][] board) {
+
+        int[] add = this.intToAdd(num);
+        int ad1 = --add[0];
+        int ad2 = --add[1];
+        return board[ad1][ad2] == ".";
+
+
+    }
+
+    public boolean checkBoard(String[][] board) {
+        int[] arr = {0, 1, 2};
+        for (int i : arr) {
+            for (int j : arr) {
+                if (board[i][j] == ".") {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
 
 }
