@@ -1,9 +1,6 @@
-
 package com.company;
 
-class initialMethods{
-
-
+class initialMethods {
 
 
 }
